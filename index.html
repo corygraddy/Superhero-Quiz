@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Superhero Quiz!?!</title>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js">
+  </script>
+  <script src="script.js" type="text/javascript"></script>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+  <div id="heading">
+    <h1>Superhero Quiz!!!</h1>
+  </div>
+  <div id="howManyQuestions" class="param">
+    <h2>How many questions would you like to try?</h2>
+    <select id="numberOfQuestions" name="numberOfQuestions">
+    	<option value="3">3</option>
+    	<option value="4">4</option>
+    	<option value="5">5</option>
+    	<option value="6">6</option>
+    	<option value="7">7</option>
+    	<option value="8">8</option>
+    	<option value="9">9</option>
+    	<option value="10">10</option>
+    </select>
+    <input id="startQuiz" type="submit" name="startQuiz" value="Start Quiz!"/>
+  </div>
+  <div id="quizBody">
+    <ul>
+    <li id="2" class="question">
+    	<h3>What is Superman's real name?</h3>
+    	<input type="radio" name="question1" value="wrong"/>Peter Parker
+    	<input type="radio" name="question1" value="right"/>Clark Kent
+    	<input type="radio" name="question1" value="wrong"/>Bruce Banner
+    	<p id="correct1" class="correct">That is correct!</p>
+    	<p id="incorrect1" class="incorrect">Incorrect. The answer is Clark Kent.</p>
+    </li>
+    <li id="3" class="question">
+    	<h3>What is Spider-man's real name?</h3>
+    	<input type="radio" name="question2" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question2" value="right"/>Peter Parker
+    	<input type="radio" name="question2" value="wrong"/>Bruce Banner
+    	<p id="correct2" class="correct">That is correct!</p>
+    	<p id="incorrect2" class="incorrect">Incorrect. The answer is Peter Parker.</p>
+    </li>
+    <li id="4" class="question">
+    	<h3>What is Batman's real name?</h3>
+    	<input type="radio" name="question3" value="wrong"/>Bruce Banner
+    	<input type="radio" name="question3" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question3" value="right"/>Bruce Wayne
+    	<p id="correct3" class="correct">That is correct!</p>
+    	<p id="incorrect3" class="incorrect">Incorrect. The answer is Bruce Wayne.</p>
+    </li>
+    <li id="5" class="question">
+    	<h3>What is Incredible Hulk's real name?</h3>
+    	<input type="radio" name="question4" value="wrong"/>James Howlett
+    	<input type="radio" name="question4" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question4" value="right"/>Bruce Banner
+    	<p id="correct4" class="correct">That is correct!</p>
+    	<p id="incorrect4" class="incorrect">Incorrect. The answer is Bruce Banner.</p>
+    </li>
+    <li id="6" class="question">
+    	<h3>What is Cyclop's real name?</h3>
+    	<input type="radio" name="question5" value="wrong"/>Bruce Wayne
+    	<input type="radio" name="question5" value="right"/>Scott Summers
+    	<input type="radio" name="question5" value="wrong"/>Bruce Banner
+    	<p id="correct5" class="correct">That is correct!</p>
+    	<p id="incorrect5" class="incorrect">Incorrect. The answer is Scott Summers.</p>
+    </li>
+    <li id="7" class="question">
+    	<h3>What is Captain America's real name?</h3>
+    	<input type="radio" name="question6" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question6" value="wrong"/>James Howlett
+    	<input type="radio" name="question6" value="right"/>Steven Rogers
+    	<p id="correct6" class="correct">That is correct!</p>
+    	<p id="incorrect6" class="incorrect">Incorrect. The answer is Steven Rogers.</p>
+    </li>
+    <li id="8" class="question">
+    	<h3>What is Wonder Woman's real name?</h3>
+    	<input type="radio" name="question7" value="right"/>Princess Diana of Themyscira
+    	<input type="radio" name="question7" value="wrong"/>Princess Sarah of Pluto
+    	<input type="radio" name="question7" value="wrong"/>Princess McFry of Burgaria
+    	<p id="correct7" class="correct">That is correct!</p>
+    	<p id="incorrect7" class="incorrect">Incorrect. The answer is Princess Diana of Themyscira.</p>
+    </li>
+    <li id="9" class="question">
+    	<h3>What is Daredevil's real name?</h3>
+    	<input type="radio" name="question8" value="right"/>Matthew Murdock
+    	<input type="radio" name="question8" value="wrong"/>Bruce Wayne
+    	<input type="radio" name="question8" value="wrong"/>James Howlett
+    	<p id="correct8" class="correct">That is correct!</p>
+    	<p id="incorrect8" class="incorrect">Incorrect. The answer is Mathew Murdock.</p>
+    </li>
+    <li id="10" class="question">
+    	<h3>What is the Wolverine's real name?</h3>
+    	<input type="radio" name="question9" value="wrong"/>Bruce Banner
+    	<input type="radio" name="question9" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question9" value="right"/>James Howlett
+    	<p id="correct9" class="correct">That is correct!</p>
+    	<p id="incorrect9" class="incorrect">Incorrect. The answer is James Howlett.</p>
+    </li>
+    <li id="11" class="question">
+    	<h3>What is Iron Man's real name?</h3>
+    	<input type="radio" name="question10" value="right"/>Tony Stark
+    	<input type="radio" name="question10" value="wrong"/>Matthew Murdock
+    	<input type="radio" name="question10" value="wrong"/>Bruce Wayne
+    	<p id="correct10" class="correct">That is correct!</p>
+    	<p id="incorrect10" class="incorrect">Incorrect. The answer is Tony Stark.</p>
+    </li>
+    </ul>
+  </div>
+  <div id="submit" class="param">
+  <input type="submit" name="submitQuiz" value="Submit Answers!"/>
+  <div id="result">
+  <p>You have answered <span id="numCorrect"></span> out of <span id="numAttemted"></span>correct.</p>
+  <p>Your score is <span id="percent"></span>.</p>
+  </div>
+  </div>
+</body>
+</html>

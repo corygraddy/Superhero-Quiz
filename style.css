@@ -1,0 +1,9 @@
+.question{
+	display: none;
+}
+.questionShown{
+	display: show;
+}
+#result{
+	display: none;
+}
